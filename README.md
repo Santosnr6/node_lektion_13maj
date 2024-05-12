@@ -9,5 +9,5 @@
 ## Länkar
 
 ## Övningar
-Hittar ni i mappen [Övningar]('https://github.com/Santosnr6/node_lektion_13maj/tree/main/%C3%96vningar')
+Hittar ni i mappen [Övningar](https://github.com/Santosnr6/node_lektion_13maj/tree/main/%C3%96vningar)
 
