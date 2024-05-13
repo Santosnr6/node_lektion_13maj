@@ -1,8 +1,7 @@
 # Backend med Node.js : Vecka 20
 
 ## Presentationer
-- [Node - Intro]()
-- [Node med Express]()
+- [Node och Express - Intro](https://docs.google.com/presentation/d/1txMLDOQeviTasgdInVb8YMfXzy1tvF56_DcD_zoxrWg/edit?usp=sharing)
 - [API - Grunder](https://docs.google.com/presentation/d/1Aw3ijmXH-wPKJTHfRikSVOSRiYXevD1z/edit?usp=sharing&ouid=117251319654116712560&rtpof=true&sd=true)
 
 ## Liveinspelningar
