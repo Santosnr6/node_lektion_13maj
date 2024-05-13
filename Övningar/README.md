@@ -1,5 +1,11 @@
 # Övningar
 
+## API Bootcamp
+Länk til API Bootcamp [hittar du här](https://docs.google.com/document/d/1kiUFMnI0J1KZLKlLIKFV4vynfDh_DmxOrm0mpk--Jxw/edit#heading=h.208073216sxn)
+
+## Node Bootcamp
+Länk til Node Bootcamp [hittar du här](https://docs.google.com/document/d/1qLUyM83X_MUmC0QoHZrsYw4UTxd41yAv1yE-vx8DZGQ/edit?usp=sharing)
+
 ## Loginsida
 
 I denna övning ska du bygga ett API som ska kunna användas till inloggning och skapa en konto.
