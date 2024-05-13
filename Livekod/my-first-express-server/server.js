@@ -8,7 +8,7 @@ const PORT = 8000;
 
 app.get("/", (req, res) => {
     console.log(add(5, 6));
-    res.send("Hejsan Hemsidan!");
+    res.send(`Summan är ${add(5, 6)}`);
 })
 
 app.listen(PORT, () => {
