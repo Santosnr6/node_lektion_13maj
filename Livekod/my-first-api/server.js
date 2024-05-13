@@ -52,6 +52,26 @@ app.post('/insults/', (request, response) => {
     }
 });
 
+// PUT request to update an insult
+app.put('/insults/:id', (request, response) => {
+    const id = request.params.id;
+    const updatedInsult = request.body;
+
+    if(insults[id]) {
+        insults[id] = updatedInsult;
+        response.json(updatedInsult);
+    } else {
+        response.status(400).send('Insult not found');
+    }
+});
+
+// DELETE request to delete specific insult
+app.delete('/insults/:id', (request, response) => {
+    const id = request.params.id;
+    const deletedInsult = insults.splice(id, 1);
+    response.status(200).json(deletedInsult);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
