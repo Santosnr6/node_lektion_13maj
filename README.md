@@ -5,7 +5,8 @@
 - [API - Grunder](https://docs.google.com/presentation/d/1Aw3ijmXH-wPKJTHfRikSVOSRiYXevD1z/edit?usp=sharing&ouid=117251319654116712560&rtpof=true&sd=true)
 
 ## Liveinspelningar
-Ingen inspelning publicerad ännu...
+- [Måndag förmiddag](https://folkuniversitetet-se.zoom.us/rec/share/5r_VZik_fNuqBKR_e90rWIqR4mNHRr6CuzbFbr31EJmDc4S53JZE9CgOIGj9G1xs.vEl3M58dzfq_Q43x). Lösenord: !7*ji6J&
+- [Måndag eftermiddag](https://folkuniversitetet-se.zoom.us/rec/share/79l-EdmfUXlX1GfpLYEuZ7JosSEhBt1FQduKtX-D5oy5SFuoEiL85utxrz0yuBDy.Uf5BA8TFe0nPUSgk). Lösenord: @57mA&rt
 
 ## Länkar
 - [Download Nodejs](https://nodejs.org/en)
