@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  border: 3px solid black;
+  width: 300px;
+  margin: 2rem auto;
+  padding: .5rem;
+  text-align: center;
+  min-height: 300px;
+}
+
+form {
+  width: 100%;
+  margin-top: .5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+}
+
+input[type=text] {
+  margin-bottom: .5rem;
+}
+
+input[type=submit],
+li {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-top: .5rem;
+}
+
+li {
+  padding: 1rem;
+  border: 1px solid black;
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.counter {
+  width: 100%;
+  display: flex;
+}
+
+button {
+  flex: 3;
+  padding: 1rem;
+}
+
+.counter p {
+  flex: 1;
+  padding: 1rem;
+}
