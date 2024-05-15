@@ -34,6 +34,27 @@ app.post('/api/todos', (req, res) => {
     res.status(201).json({message : "Todo created successfully"});
 })
 
+// PUT request to update todo
+app.put('/api/todos/:id', (req, res) => {
+    const id = req.params.id;
+    const {task, done} = req.body;
+    const todo = todos.find(t => t.id === parseInt(id));
+    console.log(todo);
+    if(!todo) {
+        return res.status(404).json({error : "Todo not found"});
+    }
+
+    if(task !== undefined) {
+        todo.task = task;
+    }
+
+    if(done !== undefined) {
+        todo.done = done;
+    }
+
+    res.json({message : "Todo updated successfully"});
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${ PORT }`);
 })

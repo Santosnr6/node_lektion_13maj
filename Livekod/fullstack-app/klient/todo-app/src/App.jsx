@@ -14,6 +14,30 @@ const fetchTodos = (setTodoList) => {
     });
 }
 
+const postTodo = (setTodoList, newTodo) => {
+  axios.post('http://localhost:8080/api/todos', newTodo)
+    .then(response => {
+      if(response.status === 201) {
+        setTodoList(prevTodoList => [...prevTodoList, newTodo]);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+const updateTodos = (setTodoList, updatedTodo) => {
+  axios.put(`http://localhost:8080/api/todos/${updatedTodo.id}`, updatedTodo)
+    .then(response => {
+      if(response.status === 200) {
+        setTodoList(t => t.map(t => t.id === updatedTodo.id ? updatedTodo : t));
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [input, setInput] = useState('');
@@ -29,16 +53,17 @@ function App() {
   const handleNewTodo = (event) => {
     event.preventDefault();
     const newTodo = {
+      id : todoList.length + 1,
       task : input,
       done : false
     }
-    setTodoList(t => [...t, newTodo]);
+    postTodo(setTodoList, newTodo);
   }
 
   const handleTodoClick = (index) => {
     const newTodoList = [...todoList]; 
     newTodoList[index].done = !newTodoList[index].done;
-    setTodoList(newTodoList); 
+    updateTodos(setTodoList, newTodoList[index]);
   }
 
   return (
