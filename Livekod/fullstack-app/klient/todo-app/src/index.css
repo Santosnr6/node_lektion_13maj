@@ -60,3 +60,12 @@ button {
   flex: 1;
   padding: 1rem;
 }
+
+.clear-group {
+  display: flex;
+  gap: .5rem;
+}
+
+.clear-group * {
+  flex: 1;
+}

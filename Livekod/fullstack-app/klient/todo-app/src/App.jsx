@@ -2,6 +2,7 @@ import TodoList from "./components/TodoList";
 import AddForm from "./components/AddForm";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ClearGroup from "./components/ClearGroup";
 
 const fetchTodos = (setTodoList) => {
   axios.get('http://localhost:8080/api/todos')
@@ -38,13 +39,42 @@ const updateTodos = (setTodoList, updatedTodo) => {
     });
 }
 
+const deleteTodos = (setTodoList) => {
+  axios.delete('http://localhost:8080/api/todos')
+    .then(response => {
+      if(response.status === 200) {
+        setTodoList([]);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+const deleteTodo = (setTodoList, deleteId) => {
+  axios.delete(`http://localhost:8080/api/todos/${deleteId}`)
+    .then(response => {
+      if(response.status === 200) {
+        setTodoList(prevTodoList => prevTodoList.filter(todo => todo.id !== parseInt(deleteId)));
+      }
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [input, setInput] = useState('');
+  const [deleteId, setDeleteId] = useState(0);
 
   useEffect(() => {
     fetchTodos(setTodoList);
   }, []);
+
+  const handleDeleteId =(event) => { 
+    setDeleteId(event.target.value);
+  }
 
   const handleInput = (event) => {
     setInput(event.target.value);
@@ -66,6 +96,14 @@ function App() {
     updateTodos(setTodoList, newTodoList[index]);
   }
 
+  const handleDeleteTodo = () => {
+    deleteTodo(setTodoList, deleteId);
+  }
+
+  const handleDeleteTodos = () => {
+    deleteTodos(setTodoList);
+  }
+
   return (
     <section className="app">
       <h1>My Todo App</h1>
@@ -76,6 +114,13 @@ function App() {
       <TodoList 
         todoList={ todoList } 
         handleClick={ handleTodoClick }
+      />
+
+      <ClearGroup
+        todoList={todoList}
+        handleDeleteId={handleDeleteId}
+        handleDeleteTodo={handleDeleteTodo}
+        handleDeleteTodos={handleDeleteTodos}
       />
     </section>
   )

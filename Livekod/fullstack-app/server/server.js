@@ -55,6 +55,19 @@ app.put('/api/todos/:id', (req, res) => {
     res.json({message : "Todo updated successfully"});
 });
 
+// DELETE request to delete all todos
+app.delete('/api/todos', (req, res) => {
+    todos = [];
+    res.json({message : "Todos cleared successfully"});
+})
+
+// DELETE request to delete specific todo
+app.delete('/api/todos/:id', (req, res) => {
+    const id = req.params.id;
+    todos = todos.filter(todo => todo.id !== parseInt(id));
+    res.status(200).json({message : "Todo deleted successfully"});
+}); 
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${ PORT }`);
 })
