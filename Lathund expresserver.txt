@@ -1,0 +1,11 @@
+Lathund expresserver
+
+1. Skapa upp en servermapp och ställ dig i den
+2. Skapa din serverfil (ex app.js, index.js, server.js)
+3. Kör kommandot "npm init -y" (kontrollera så att du står i rätt mapp!!!)
+4. Kör kommandot "npm i nodemon --save-dev"
+5. Kör kommandot "npm i express"
+6. Öppna upp din package.json-fil
+7. Lägg till "type" : "module" till ditt objekt
+8. I ditt "scripts"-objekt lägger du till "start" : "node <ditt serverfilnamn>"
+9. I ditt "scripts"-objekt lägger du till "dev" : "nodemon <ditt serverfilnamn>"
